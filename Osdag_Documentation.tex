@@ -10,7 +10,7 @@
 \usepackage[final]{pdfpages}
 \usepackage[urlcolor  = blue,
  	colorlinks=true,
-    allcolors = blue,
+    allcolors = blue,	`1Q
     linktocpage=true,]{hyperref}
 \usepackage{color}
 \usepackage[cache=false]{minted}
@@ -111,17 +111,60 @@ Creating input dock for gusset plate.
 \noindent For Beam Column End plate design I have added python code for weld design between beam and end plate. Concerned code is attached vide \hyperlink {page.102}{Appendix-G}.
 
 \section{Settingup log file}
-\noindent What function should be added to setup log flie
+\noindent Log file setup can be done by just adding this python function \hyperlink {page.10}{Appendix-A} in your module file. The function generates log messages for log file 'logging\_text.log', for run terminal and for textarea in module\_window ui. Log messages can be generated using logger.info(error message), logger.warning(error message) and logger.error(error message).
 
-\section{generating Warning/Error message box}
+\section{Generating Warning/Error message box}
+\noindent QMessageBox can be used to generate messagebox for error messages in ui. Concerned code is attached vide \hyperlink {page.11}{Appendix-B}.
 
-
+\section{Design\_Preferences UI}
+\noindent Design\_preference UI contains multiple tabs based on items of tab\_list() function in module file. Each tab is specified by a tuple with three elements.. tab\_name, tab\_type(There are two types: One with buttons to update database and one without buttons) and function\_name(Which contains all the items to be shown in the tab - it is similar to input\_values() function of input dock). Concerned code is attached vide \hyperlink {page.12}{Appendix-C}.
 
 \nocite{*}
 \newpage
 \bibliographystyle{unsrtnat}
 \bibliography{references}
 
+\begin{appendices}
+	\chapter{Log File Setup}
+	\inputminted[%
+	breaklines,
+	mathescape,
+	firstline=15,
+	lastline=40,
+	linenos,
+	numbersep=5pt,
+	frame=single,
+	framesep=5pt,
+	numbersep=5pt,
+	fontsize=\small,
+	]{python}{../Osdag3-master/gusset_connection.py}
+	\chapter{Warning/Error message box}
+	\inputminted[%
+	breaklines,
+	mathescape,
+	firstline=126,
+	lastline=130,
+	linenos,
+	numbersep=5pt,
+	frame=single,
+	framesep=5pt,
+	numbersep=5pt,
+	fontsize=\small,
+	]{python}{../Osdag3-master/gusset_connection.py}
+	\chapter{Design\_preference UI}
+	\inputminted[%
+	breaklines,
+	mathescape,
+	firstline=131,
+	lastline=182,
+	linenos,
+	numbersep=5pt,
+	frame=single,
+	framesep=5pt,
+	numbersep=5pt,
+	fontsize=\small,
+	]{python}{../Osdag3-master/gusset_connection.py}
+\end{appendices}
 \begin{comment}
 \begin{appendices}
 	\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
