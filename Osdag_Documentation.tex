@@ -111,13 +111,13 @@ Creating input dock for gusset plate.
 \noindent For Beam Column End plate design I have added python code for weld design between beam and end plate. Concerned code is attached vide \hyperlink {page.102}{Appendix-G}.
 
 \section{Settingup log file}
-\noindent Log file setup can be done by just adding this python function \hyperlink {page.10}{Appendix-A} in your module file. The function generates log messages for log file 'logging\_text.log', for run terminal and for textarea in module\_window ui. Log messages can be generated using logger.info(error message), logger.warning(error message) and logger.error(error message).
+\noindent Log file setup can be done by just adding this python function \hyperlink {page.10}{Appendix-A} in your module file. The function generates log messages for log file 'logging\_text.log', for run terminal and for textarea in module\_window ui. Log messages can be generated using logger.info(error message), logger.warning(error message) and logger.error(error message). To change the color of warning, error or information messages in UI, just edit the color in span style in the function handle() of class OurLog.
 
 \section{Generating Warning/Error message box}
-\noindent QMessageBox can be used to generate messagebox for error messages in ui. Concerned code is attached vide \hyperlink {page.11}{Appendix-B}.
+\noindent QMessageBox can be used to generate messagebox for error messages in ui. Concerned code is attached vide \hyperlink {page.12}{Appendix-B}.
 
 \section{Design\_Preferences UI}
-\noindent Design\_preference UI contains multiple tabs based on items of tab\_list() function in module file. Each tab is specified by a tuple with three elements.. tab\_name, tab\_type(There are two types: One with buttons to update database and one without buttons) and function\_name(Which contains all the items to be shown in the tab - it is similar to input\_values() function of input dock). Concerned code is attached vide \hyperlink {page.12}{Appendix-C}.
+\noindent Design\_preference UI contains multiple tabs based on items of tab\_list() function in module file. Each tab is specified by a tuple with three elements.. tab\_name, tab\_type(There are two types: One with buttons to update database and one without buttons) and function\_name(Which contains all the items to be shown in the tab - it is similar to input\_values() function of input dock). Concerned code is attached vide \hyperlink {page.13}{Appendix-C}.
 
 \nocite{*}
 \newpage
@@ -129,8 +129,20 @@ Creating input dock for gusset plate.
 	\inputminted[%
 	breaklines,
 	mathescape,
-	firstline=15,
-	lastline=40,
+	firstline=190,
+	lastline=216,
+	linenos,
+	numbersep=5pt,
+	frame=single,
+	framesep=5pt,
+	numbersep=5pt,
+	fontsize=\small,
+	]{python}{../Osdag3-master/gusset_connection.py}
+	\inputminted[%
+	breaklines,
+	mathescape,
+	firstline=167,
+	lastline=184,
 	linenos,
 	numbersep=5pt,
 	frame=single,
@@ -155,8 +167,8 @@ Creating input dock for gusset plate.
 	\inputminted[%
 	breaklines,
 	mathescape,
-	firstline=131,
-	lastline=182,
+	firstline=324,
+	lastline=366,
 	linenos,
 	numbersep=5pt,
 	frame=single,
